@@ -10,9 +10,9 @@ from Crypto.PublicKey import RSA
 
 D = decimal.Decimal
 #n = D(sys.argv[1])
-n = D(94614493)
-e = 65537
-c = 2996
+n = D(221)
+e = 5
+c = 53
 
 print(n)
 def decrypt(N, e, c):
@@ -27,9 +27,9 @@ def decrypt(N, e, c):
     phi = (p-1)*(q-1)
     print('phi =',phi)
     d = modinv(e, phi)
-    print('d =',int(d))
+    print('d =',d)
     m = (c**d)%N
-    print(m)
+    print('m =',m)
 
 def egcd(a, b):
     if a == 0:
